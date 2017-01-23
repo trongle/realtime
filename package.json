@@ -1,0 +1,24 @@
+{
+  "name": "real_time_web_chat",
+  "version": "1.0.0",
+  "description": "Demo real time nodejs,socket.io",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trongle/realtime.git"
+  },
+  "author": "TrongLe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trongle/realtime/issues"
+  },
+  "homepage": "https://github.com/trongle/realtime#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "jade": "^1.11.0",
+    "socket.io": "^1.7.2"
+  }
+}

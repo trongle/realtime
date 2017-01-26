@@ -1,14 +1,43 @@
 doctype
 html
   head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
     title= "Real time web chat"
-    script(src='/chat.js')
+    link(rel='stylesheet' href='/css/bootstrap.min.css')
+    link(rel='stylesheet' href='/css/main.css')
+    script(src='/js/jquery-3.1.1.js')
+    script(src='/js/bootstrap.min.js')
+    script(src='/js/chat.js')
     script(src='/socket.io/socket.io.js')
   body
-    #content(style='width:500px; height:300px; margin:0 0 20px 0; border:solid 1px #999; over-flow-y: scroll')
-    .controls
-      | Name: 
-      input#name(style='width:350px')
-      br
-      input#field(style='with:350px')
-      input#send(type='button', value='send')
+    .container
+        
+        .row
+          #chat_box.col-md-8.col-sm-8.col-xs-12
+            p.title group chat
+            
+            
+            #content
+              
+              #message_box
+
+              .form-group
+                .row
+                  .col-md-5.col-xs-12.col-sm-12
+                    .input-group
+                      .input-group-addon Avatar:
+                      input.form-control#avatar()
+
+              
+              .form-group
+                  .row
+                    .col-md-9.col-xs-9.col-sm-9
+                      .row
+                        .col-md-4.col-xs-4.col-sm-4.nickname
+                          input.form-control#name(placeholder='Type name')
+                        .col-md-8.col-xs-8.col-sm-8.text-message
+                          input.form-control#field(placeholder='Mesasge here ...')
+                          
+                    .col-md-3.col-xs-3.col-sm-3    
+                      button.btn.btn-primary#send(type='button') Send

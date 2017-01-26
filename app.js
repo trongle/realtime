@@ -23,6 +23,11 @@ io.sockets.on('connection', (socket) => {
   socket.emit('message', {message: 'Welcome to the chat'});
 
   socket.on('send', (data) => {
-    io.sockets.emit('message', data);
+    // io.sockets.emit('message', data);
+
+    socket.broadcast.emit('user_connected',data);
+
+    socket.emit('message',data);
   })
+
 })
